@@ -1,0 +1,33 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aniverse</title>
+    <link rel="stylesheet" type="text/css" href="{% static 'aniverse/css/style.css' %}">
+</head>
+<body>
+    <div class="wrapper">
+        <header class="header">
+            <div class="header__wrapper">
+                <div class="header__logo">
+                    <a href="#!">
+                        <img src="/static/aniverse/logo_icon.png" alt="logo">
+                    </a>
+                </div>
+                <div class="header__name">
+                    <a href="{% url 'home' %}" class="header__name">Aniverse</a>
+                </div>
+                <nav class="header__nav">
+                    <ul class="header__list">
+                        <li class="header__item"><a href="#!" class="header__link">Программа курса</a></li>
+                        <li class="header__item"><a href="#!" class="header__link">Отзывы</a></li>
+                        <li class="header__item"><a href="#!" class="header__link">Контакты</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </header>
+    </div>
+</body>
+</html>
