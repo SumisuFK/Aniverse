@@ -7,17 +7,19 @@
     <title>Aniverse</title>
     <link rel="stylesheet" type="text/css" href="{% static 'aniverse/css/style.css' %}">
 </head>
-<body>
+<body>     {% comment %}  СДЕЛАТЬ ЗАТЕМНЕНИЕ ДЛЯ ФОНА  {% endcomment %}
     <div class="wrapper">
         <header class="header">
             <div class="header__wrapper">
-                <div class="header__logo">
-                    <a href="#!">
-                        <img src="/static/aniverse/logo_icon.png" alt="logo">
-                    </a>
-                </div>
-                <div class="header__name">
-                    <a href="{% url 'home' %}" class="header__name">Aniverse</a>
+                <div class="name__logo">
+                    <div class="header__logo">
+                        <a href="#!">
+                            <img src="{% static 'aniverse/logo_icon.png' %}" width="74" height="72" alt="logo">
+                        </a>
+                    </div>
+                    <div class="header__name">
+                        <a href="{% url 'home' %}" class="header__name">Aniverse</a>
+                    </div>
                 </div>
                 <nav class="header__nav">
                     <ul class="header__list">
@@ -28,6 +30,45 @@
                 </nav>
             </div>
         </header>
+        <main class="main">
+            <section class="first" style="display: flex; justify-content: center;">
+                <div class="main__left">
+                    <div class="left__title">
+                        <li class="title__text">Онлайн-курс рисование в стиле аниме</li>
+                    </div>
+                    <div class="left__info">
+                        <li class="info__text">Онлайн-курс "Рисование в стиле аниме" для начинающих, с базовых основ построения рисунка, и до достойных работ со взвешенной композицией!</li>
+                    </div>
+                </div>
+                <div class="main__application">
+                    <div class="background__application"></div>
+                    <div class="application__title">
+                        <li class="title__text2">Купить курс прямо сейчас</li>
+                    </div>
+                    <div class="application__data">
+                        <form action="#" class="form">
+                            <div class="form__group">
+                                <input type="text" name="name" id="name" class="form__input" placeholder=" " required/>
+                                <label for="name" class="form__label">Имя</label>
+                            </div>
+                            <div class="form__group">
+                                <input type="email" name="email" id="email" class="form__input" placeholder=" " required/>
+                                <label for="email" class="form__label">Ваш E-mail</label>
+                            </div>
+                            <div class="form__group">
+                                <input type="tel" name="phone" id="phone" class="form__input" placeholder=" " required/>
+                                <label for="phone" class="form__label">Номер телефона</label>
+                            </div>
+                            <div class="form__group">
+                                <input type="text" name="promo" id="promo" placeholder=" " class="form__input"/>
+                                <label for="promo" class="form__label">Промокод</label>
+                            </div>
+                            <button type="submit">Перейти к оплате</button>
+                        </form>
+                    </div>
+                </div>
+            </section>
+        </main>
     </div>
 </body>
 </html>
