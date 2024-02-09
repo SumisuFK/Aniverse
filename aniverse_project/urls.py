@@ -1,7 +1,7 @@
 """
 URL configuration for aniverse_project project.
 
-The `urlpatterns` list routes URLs to views. For more information please see:
+The `urlpatterns` list routes URLs to '',views. For more information please see:
     https://docs.djangoproject.com/en/4.2/topics/http/urls/
 Examples:
 Function views
@@ -20,5 +20,6 @@ from aniverse import views
 
 urlpatterns = [
     path("admin/", admin.site.urls),
-    path('', views.home, name="home")
+    path('', views.home, name="home"),
+    path('send_mail_view', views.send_mail, name="send_mail_view")
 ]

@@ -20,12 +20,12 @@
                     <div class="header__name">
                         <a href="{% url 'home' %}" class="header__name">Aniverse</a>
                     </div>
-                </div>
+                </div>  
                 <nav class="header__nav">
                     <ul class="header__list">
-                        <li class="header__item"><a href="#!" class="header__link">Программа курса</a></li>
-                        <li class="header__item"><a href="#!" class="header__link">Отзывы</a></li>
-                        <li class="header__item"><a href="#!" class="header__link">Контакты</a></li>
+                        <li class="header__item"><a href="#target2" class="header__link">Программа курса</a></li>
+                        <li class="header__item"><a href="#target3" class="header__link">Отзывы</a></li>
+                        <li class="header__item"><a href="#target4" class="header__link">Контакты</a></li>
                     </ul>
                 </nav>
             </div>
@@ -46,7 +46,8 @@
                         <li class="title__text2">Купить курс прямо сейчас</li>
                     </div>
                     <div class="application__data">
-                        <form action="#" class="form">
+                        <form action="{% url 'send_mail_view' %}" class="form" method="post">
+                            {% csrf_token %}
                             <div class="form__group">
                                 <input type="text" name="name" id="name" class="form__input" placeholder=" " required/>
                                 <label for="name" class="form__label">Имя</label>
@@ -63,12 +64,166 @@
                                 <input type="text" name="promo" id="promo" placeholder=" " class="form__input"/>
                                 <label for="promo" class="form__label">Промокод</label>
                             </div>
-                            <button type="submit">Перейти к оплате</button>
+                            <button type="submit" class="button1">Перейти к оплате</button>
+                            <div class="form__group">
+                                <p class="form__text">После оплаты курса на указанную вами почту автоматически придёт вся информация для прохождения курса</p>
+                            </div>
+                            <div>
+                                <p style="color: red;">{{ error_message }}</p>
+                            </div>
                         </form>
+                    </div>
+                </div>
+                <div class="arrow" onclick="ScrollToTarget()"></div>
+            </section>
+            <section class="second" style="background-color: black;" id="TargetElement">
+                <div class="mini__panel">
+                    <div class="first__panel">
+                        <p class="text__panel1 white" style="color: #00FF57;">СТАРТ ОБУЧЕНИЯ</p>
+                        <p class="text__panel2 white" style="font-weight: 800;">Сразу после оплаты</p>
+                    </div>
+                        <span class="panel__stick"></span>
+                    <div class="second__panel">
+                        <p class="text__panel3 white">ПО ВСЕМ ВОПРОСАМ</p>
+                        <p class="text__panel4 white" style="font-weight: 800;">Преподаватель вас выслушает</p>
+                    </div>
+                        <span class="panel__stick"></span>
+                    <div class="third__panel">
+                        <p class="text__panel5 white" style="color: #00F0FF;">ОБУЧЕНИЕ ДЛЯ ВСЕХ</p>
+                        <p class="text__panel6 white" style="font-weight: 800;"> От простого к сложному</p>
+                    </div>
+                </div>
+                <div style="display: flex; justify-content: center;">
+                    <span class="purple__stick"></span>
+                </div>
+                <div class="panel2">
+                    <div class="panel2__1" id="first">
+                        <div class="panel2__title__div">
+                            <p class="panel2__title" style="color: #FF00E5;">Чему вы научитесь на курсе</p>
+                        </div>
+                        <div class="panel2__description__div">
+                            <p class="panel2__description" style="color: #FFF;">После каждого урока вы будете получать подготовленные для вас домашние задания, которые будет проверять преподаватель, и в формате личного общения консультировать по рекомендациям и ошибкам!</p>
+                        </div>
+                    </div>
+                    <div class="lessons" id="target2">
+                        <div class="basic__level">
+                            <div class="level1" style="display: flex; justify-content: center;">
+                                <span class="level__stick"></span>
+                                <p style="color: #5EE72E; font-size: 30px; font-weight: 800; font-size: 40px;">Базовый уровень</p>
+                                <span class="level__stick"></span>
+                            </div>
+                            <div class="basic__lessons">
+                                <div class="pad"><h1 class="lesson1">УРОК 1.</h1><p class="lesson2"> О стилях и почему не стоит беспокоиться о них когда начинаешь.</p><br></div>
+                                <div class="pad"><h1 class="lesson1">УРОК 2.</h1><p class="lesson2"> Анатомия человека и анатомия в аниме.</p><br></div>
+                                <div class="pad"><h1 class="lesson1">УРОК 3.</h1><p class="lesson2"> Череп и пропорции лица.</p><br></div>
+                                <div class="pad"><h1 class="lesson1">УРОК 4.</h1><p class="lesson2"> Глаза.</p><br></div>
+                                <div class="pad"><h1 class="lesson1">УРОК 5.</h1><p class="lesson2"> Рот и нос.</p><br></div>
+                                <div class="pad"><h1 class="lesson1">УРОК 6.</h1><p class="lesson2"> Волосы и уши.</p><br></div>
+                                <div class="pad"><h1 class="lesson1">УРОК 7.</h1><p class="lesson2"> Эмоции персонажа.</p><br></div>
+                                <div class="pad"><h1 class="lesson1">УРОК 8.</h1><p class="lesson2"> Туловище и скелет.</p><br></div>
+                                <div class="pad"><h1 class="lesson1">УРОК 9.</h1><p class="lesson2"> Спина,торс и мышцы</p><br></div>
+                                <div class="pad"><h1 class="lesson1">УРОК 10.</h1><p class="lesson2"> Руки и ноги.</p><br></div>
+                                <div class="pad"><h1 class="lesson1">УРОК 11.</h1><p class="lesson2"> Ракурс,позы и перспектива.</p><br></div>
+                                <div class="pad"><h1 class="lesson1">УРОК 12.</h1><p class="lesson2"> Одежда и позы.</p><br></div>
+                                <div class="pad"><h1 class="lesson1">УРОК 13.</h1><p class="lesson2"> Одежда-продолжение.Складки.Обувь.</p><br></div>
+                                <div class="pad"><h1 class="lesson1">УРОК 14.</h1><p class="lesson2"> Применение цвета в работе.</p><br></div>
+                                <div class="pad"><h1 class="lesson1">УРОК 15.</h1><p class="lesson2"> Тени и свет.</p><br></div>
+                                <div class="pad"><h1 class="lesson1">УРОК 16.</h1><p class="lesson2"> Правильный контур и детали.</p><br></div>
+                                <div class="pad"><h1 class="lesson1">УРОК 17.</h1><p class="lesson2"> Покрас.Палитра.Основные и второстепенные цвета.Финальная работа.</p><br></div>
+                            </div>
+                        </div>
+                        <div class="pro__level">
+                            <div class="level2" style="display: flex; justify-content: center;">
+                                <span class="level__stick"></span>
+                                <p style="color: #2805FF; font-size: 30px; font-weight: 800; font-size: 40px;">Продвинутый уровень</p>
+                                <span class="level__stick"></span>
+                            </div>
+                            <div class="basic__lessons">
+                                <div class="pad"><h1 class="lesson1">УРОК 18.</h1><p class="lesson2"> Жанры,примеры рисования в каждом жанре и приёмы демонстрации готовых работ.</p><br></div>
+                                <div class="pad"><h1 class="lesson1">УРОК 19.</h1><p class="lesson2"> Рисование портрета в разных ракурсах,сложные волосы.</p><br></div>
+                                <div class="pad"><h1 class="lesson1">УРОК 20.</h1><p class="lesson2"> Тело и грудь.Рисование Рем и Эмилии из Re:Zero и Саске из Naruto.</p><br></div>
+                                <div class="pad"><h1 class="lesson1">УРОК 21.</h1><p class="lesson2"> Кисти руки,рука у лицы,стопы.Рисуем Адзусу из K-On!</p><br></div>
+                                <div class="pad"><h1 class="lesson1">УРОК 22.</h1><p class="lesson2"> Сложные складки на груди,талии и сшибах руки.Виды складок,юбки,кружево.Обувь и каблуки.</p><br></div>
+                                <div class="pad"><h1 class="lesson1">УРОК 23.</h1><p class="lesson2"> Сложности композиции.Оформление скетчбука.Создание открыток в стиле аниме.Дополнительные средства украшения.</p><br></div>
+                                <div class="pad"><h1 class="lesson1">УРОК 24.</h1><p class="lesson2"> Чиби-гипертрофированные эмоции.Рисуем Анну и Элизу из Холодного Сердца.</p><br></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div style="display: flex; justify-content: center;">
+                    <span class="orange__stick"></span>
+                </div>
+                <div class="reviews" id="target3">
+                    <div class="reviews__title">
+                        <p>Отзывы о курсе</p>
+                    </div>
+                    <div class="reviews__blocks">
+                        <div class="reviews__block">
+                            <div class="block__avatar">
+                                <img src="{% static 'aniverse/antoxa.jpg' %}" alt="first photo" class="photo">
+                            </div>
+                            <div class="block__name">
+                                <p class="review__name">Виталий</p>
+                            </div>
+                            <div class="block__text">
+                                <p class="review__text">Этот ресурс оказался настоящим кладезем знаний и вдохновения для всех, кто стремится освоить искусство создания анимационных персонажей.Прежде всего, сайт имеет интуитивно понятный и удобный интерфейс. Навигация по категориям курсов легкая, что позволяет быстро найти подходящий материал для изучения. Весь контент представлен в удобном формате, который подходит как для новичков, так и для опытных художников.</p>
+                            </div>
+                        </div>
+                        <div class="reviews__block">
+                            <div class="block__avatar">
+                                <img src="{% static 'aniverse/zxcat.jpg' %}" alt="" class="photo">
+                            </div>
+                            <div class="block__name">
+                                <p class="review__name">Максим</p>
+                            </div>
+                            <div class="block__text">
+                                <p class="review__text">Одним из главных преимуществ сайта является разнообразие курсов, охватывающих все аспекты рисования аниме: от основных приемов и техник до продвинутых методов создания персонажей и фонов. Я оценил возможность выбора между курсами для различных уровней подготовки, что позволяет каждому находить подходящий контент в соответствии с собственными потребностями и целями.Качество обучающего материала также заслуживает высших похвал. Все курсы разработаны опытными и профессиональными художниками, которые не только владеют темой в совершенстве, но и способны эффективно передать свои знания. Видеоуроки, иллюстрации и практические задания делают процесс обучения увлекательным и результативным.</p>
+                            </div>
+                        </div>
+                        <div class="reviews__block">
+                            <div class="block__avatar">
+                                <img src="{% static 'aniverse/sigma.jpg' %}" alt="" class="photo">
+                            </div>
+                            <div class="block__name">
+                                <p class="review__name">Ксения</p>
+                            </div>
+                            <div class="block__text">
+                                <p class="review__text">Интерфейс удобен, навигация интуитивно понятна. Курсы охватывают все уровни подготовки, от начинающих до продвинутых художников. Видеоуроки и практические задания делают обучение увлекательным. Профессиональные художники передают свои знания с ярким энтузиазмом. Обслуживание сайта оперативное. Рекомендую для тех, кто хочет развиваться в искусстве анимации.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="tg__button__block">
+                        <a href="" class="tg__button">Все отзывы</a>
+                    </div>
+                </div>
+                <div style="display: flex; justify-content: center;">
+                    <span class="blue__stick"></span>
+                </div>
+                <div class="prelast__block" id="third">
+                    <div class="text__block">
+                        <p class="text">Присоединись к группе учеников уже сейчас</p>
+                    </div>
+                    <div class="button__block">
+                        <a href="#" class="link">Начать сейчас</a>
+                    </div>
+                </div>
+                <div style="display: flex; justify-content: center;">
+                    <span class="grey__stick"></span>
+                </div>
+                <div class="last__block" id="target4">
+                    <div class="last__text__block">
+                        <p class="last__text">Остались вопросы?</p>
+                    </div>
+                    <div class="last__button__block">
+                        <a href="" class="last__button__link">Получить консультацию</a>
                     </div>
                 </div>
             </section>
         </main>
     </div>
+
+    <script src="{% static 'aniverse/libs/jquery/jquery.js' %}" type="text/javascript"></script>
+    <script src="{% static 'aniverse/js/main.js' %}" type="text/javascript"></script>
+    <script src="{% static 'aniverse/libs/maskedinput/jquery.maskedinput.js' %}" type="text/javascript"></script>
 </body>
 </html>
