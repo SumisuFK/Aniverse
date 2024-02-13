@@ -20,7 +20,7 @@ body {
     background-repeat: no-repeat;
     height: 1400px;
     flex-shrink: 0;
-    min-width: 1425px;
+    min-width: 100%;
 }
 
 a {
@@ -72,7 +72,7 @@ li {
 .header__name {
     font-size: 43px;
     flex-shrink: 0;
-    font-family: Panton ExtraBold;
+    font-family: 'Panton ExtraBold';
     color: #FFF;
     padding-left: 7px;
 }
@@ -91,7 +91,7 @@ li {
     color: #FFF;
     text-align: center;
     text-shadow: 9px 16px 6.2px rgba(0, 0, 0, 0.25);
-    font-family: Panton Black;
+    font-family: 'Panton Black';
     font-size: 128px;
     font-weight: 900;
 }
@@ -100,7 +100,7 @@ li {
     color: #FFF;
     text-align: center;
     text-shadow: 1px 5px 0.4px rgba(0, 0, 0, 0.25);
-    font-family: Neon 80s;
+    font-family: 'Neon 80s';
     font-size: 36px;
     font-weight: 400;
 }
@@ -131,7 +131,7 @@ li {
 }
 
 .title__text2 {
-    font-family: Panton Black;
+    font-family: 'Panton Black';
     font-size: 48px;
     font-weight: 900;
     color: #FFF;
@@ -531,6 +531,11 @@ li {
     scroll-behavior: smooth;
 }
 
+.first {
+    display: flex; 
+    justify-content: center;
+}
+
 @media (max-width: 1600px) {
     .main__application {
         margin: 25px 10px 60px 0;
@@ -568,24 +573,28 @@ li {
     }
 }
 
+@media (max-width: 1185px) {
+    .header__wrapper {
+        padding: 0 0 0 0;
+    }
+}
+
 @media (max-width: 960px) {
     .reviews__blocks {
         display: block;
-    }
-
-    .reviews__block {
-        float: none;
-        height: 665px;
+        margin: 0;
     }
 
     .reviews__block {
         height: 616px;
-        margin: 123px 29% 0 29%;
+        margin: 123px 21% 0 21%;
         width: 571px;
     }
 
     .photo {
-        margin: -68px 0 68px 0px;
+        margin: -43px 0 0px 0px;
+        width: 26%;
+        height: 94%;
     }
 
     .block__avatar {
@@ -606,6 +615,7 @@ li {
     }
 
     .tg__button__block {
+        padding: 26px 2px 0px 2%;
         justify-content: center;
     }
 
@@ -648,5 +658,64 @@ li {
 
     .panel__stick {
         margin: 0px 20px 0 20px;
+    }
+
+    .first {
+        display: block;
+    }
+
+    .main__left {
+        width: 100%;
+    }
+
+    .main__application {
+        margin: 25px 0 60px 21%;
+    }
+
+    .wrapper {
+        min-height: 2700px;
+        background-position: 60% 0%;
+    }
+
+    .link {
+        margin: 0 0 0 21%;
+    }
+}
+
+@media (max-width: 375px) {
+    .header__item {
+        font-size: 27px;
+        margin-right: 0;
+        padding: 0 10px 18px 10px;
+    }
+
+    .header__item:last-child {
+        padding: 0 10px 0 10px;
+    }
+
+    .title__text {
+        font-size: 61px;
+    }
+
+    .header__list {
+        display: block;
+    }
+
+    .main__left {
+        margin: 50px 0 0 0;
+    }
+
+    .header__nav {
+        margin-top: 5%;
+    }
+
+    .main__application {
+        margin: 25px 0 60px 5%;
+        width: 329px;
+    }
+
+    .application__data {
+        left: 1%;
+        width: 347px;
     }
 }
