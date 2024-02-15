@@ -718,4 +718,22 @@ li {
         left: 1%;
         width: 347px;
     }
+
+    .application__title {
+        left: 0;
+        width: 324px;
+    }
+
+    .title__text2 {
+        font-size: 46px;
+    }
+
+    .form__label {
+        left: -42px;
+    }
+
+    .form__input {
+        margin-left: -7%;
+        width: 80%;
+    }
 }
