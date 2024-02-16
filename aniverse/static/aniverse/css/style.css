@@ -518,6 +518,13 @@ li {
     transform: rotate(135deg);
 }
 
+.pro__level__text {
+    color: #2805FF;
+    font-size: 30px;
+    font-weight: 800;
+    font-size: 40px;
+}
+
 @keyframes arrowDown {
     0%, 100% {
         transform: translateY(0);
@@ -729,11 +736,138 @@ li {
     }
 
     .form__label {
-        left: -42px;
+        left: -28px;
     }
 
     .form__input {
         margin-left: -7%;
         width: 80%;
+        font-size: 32px;
+    }
+
+    .form__group {
+        margin-left: -10%;
+        width: 87%;
+        text-align: center;
+    }
+
+    .button1 {
+        font-size: 34px;
+        width: 291px;
+        height: 85px;
+        margin: 0 0 0 -31px
+    }
+
+    .button1:hover {
+        width: 303px;
+        height: 104px;
+        margin: 0 0 0 -34px;
+        font-size: 34px;
+    }
+
+    .form__text {
+        font-size: 24px;
+        padding-top: 15px;
+    }
+
+    .mini__panel {
+        display: block;
+        width: 107%;
+        margin: 0 0 0 -5%;
+    }
+
+    .purple__stick {
+        width: 326px;
+    }
+
+    .panel2__title__div {
+        font-size: 54px;
+    }
+
+    .panel2__description__div {
+        padding: 30px 1% 0 0%;
+        font-size: 30px;
+    }
+
+    .level__stick {
+        margin: 46px 15px 25px 15px;
+    }
+
+    .basic__lessons {
+        padding: 3.5% 3% 1% 2%;
+    }
+
+    .pro__level__text {
+        text-align: center;
+    }
+
+    .level__stick {
+        margin: 46px 7px 25px 8px;
+    }
+
+    .panel2__title {
+        text-align: center;
+    }
+
+    .background__application {
+        height: 88%;
+    }
+
+    .reviews__title {
+        text-align: center;
+    }
+
+    .reviews__block {
+        margin: 123px 7% 0 7%;
+        width: 324px;
+    }
+
+    .photo {
+        width: 41%;
+    }
+
+    .block__text {
+        padding: 0 0% 0 0%;
+    }
+
+    .text__block {
+        width: 346px;
+        margin-left: -9%;
+    }
+
+    .prelast__block {
+        display: block;
+        margin: 55px 15% 15% 10%;
+    }
+
+    .button__block {
+        width: 256px;
+        margin-top: 7%;
+    }
+
+    .button__block
+
+    .link {
+        margin: 0 0 0 0;
+    }
+
+    .link:hover {
+        font-size: 39px;
+    }
+
+    .last__text__block {
+        text-align: center;
+    }
+
+    .last__button__link {
+        text-align: center;
+        width: 311px;
+        height: 79px;
+        font-size: 34px;
+    }
+
+    .last__block {
+        margin-top: 15%;
+        padding: 5% 0 10% 0;
     }
 }
